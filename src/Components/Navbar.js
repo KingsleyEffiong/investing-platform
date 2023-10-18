@@ -1,18 +1,34 @@
-import React from 'react'
+import  React, {useState} from 'react'
 import './Navbar.css'
+import { Link } from 'react-router-dom';
+import * as AiIcons from 'react-icons/ai'
 
 function Navbar() {
+  const   [click, setClick]= useState(false);
+
+     const handleClick = () => setClick(!click);
+    const closeMobileMenu = () => setClick(false);
+
+
   return (
+
     <>
     <div className='nav_container'>
-      <div className='logo'></div>
-      <div className='list_container'>
-        <ul className='list_style'>
-          <li><a href=''>Sign in</a></li>
-          <li><a href=''>Services</a></li>
-          <li><a href=''>API</a></li>
-          <li><a href=''>Sign up</a></li>
-          <li><a href=''>Get US Number</a></li>
+     <Link to="/">
+        <div className='logo' onClick ={closeMobileMenu}>
+        <img  src='/Images/Invest in logo.jpg' alt='invest in logo'></img>
+      </div>
+      </Link>
+      <div className='menu-icon' onClick={handleClick}>
+      <AiIcons.AiOutlineBars/>
+      </div>
+      <div className='list_container' >
+        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+          <Link to='' className='list_links'><li>Home</li></Link>
+          <Link to=''className='list_links' ><li>About</li></Link>
+          <Link to=''className='list_links'><li>Register</li></Link>
+          <Link to=''className='list_links'><li>SignIn</li> </Link>
+          <Link to=''className='list_links'><li>Contact us</li></Link>
         </ul>
       </div>
 

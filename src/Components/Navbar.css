@@ -8,28 +8,96 @@
     height: 10vh;
     background-color: inherit;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    border: 2px solid black;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 3px 3px #2c3192;
+}
+.logo{
+    margin: 0 1em;
 }
 .list_container{
-    margin-left: 30%;
-   
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+.menu-icon{
+    display: none;
 }
 
-.list_style{
+.nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    position:absolute;
+    width: 100%;
+    list-style: none;
+    right: 0;
+    text-align: center;
+    justify-content: flex-end;
+    align-items: center;    
 }
-.list_style li a{
-    color: rgb(184, 180, 180);
+li {
+    margin: 0 1.2rem;
+}
+.nav-menu  a{
+    color: #2c3192;
     text-decoration: none;
     font-family: serif;
-    font-size: medium;
+    font-size: 1.3rem;
 }
-.list_style li a:hover{
-    color: blue;
+
+li .list_links:hover{
+    color: black;
     transition: 1.5s ease-in-out;
+}
+@media screen and (max-width:1000px) {
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        height: 74vh;
+        position: absolute;
+        top: 80px;
+        justify-content: flex-start;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+    .nav-menu.active {
+        background: #2c3192;
+        left: 0;
+        opacity: 70;
+        width: 100%;
+        transition: all 0.5s ease;
+        z-index: 1;
+        margin-top: 10rem;
+        transition: ease-in-out 2s;
+    }
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        color:  #2c3192;
+        cursor: pointer;
+    }
+ 
+     .nav-menu  a{
+        color: #ffffff;
+        text-decoration: none;
+        font-family: serif;
+        font-size: 1.3rem;
+       margin: 20px;
+    }
+    li {
+        margin: 2rem 0;
+    }
+    li .list_links:hover{
+        color:#2c3192;
+        transition: 1.5s ease-in-out;
+    } 
 }
 
