@@ -9,9 +9,8 @@
 }
 
 .form-container{
-    width: 50%;
+    width: 40%;
     height: 70vh;
-    position: fixed;
     justify-content: end;
     display: flex;;
     right: 0;
@@ -70,6 +69,152 @@ button{
     font-family: 'Courier New', Courier, monospace;
     border-radius: 3px;
 }
+.card_text{
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    width: inherit;
+    align-items: center;
+    background-color: #1d82ea;
+    color: white;
+    text-align: center;
+}
+.card_main_container{
+    height: auto;
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: linear-gradient( #1d82ea , white);
+}
+.flex_card{
+    height: inherit;
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.card{
+    width: 47%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+}
+.card_category{
+    height: 80%;
+    width: 80%;
+    border-radius: 8px;
+}
+.card_icon{
+    background-color: #e8f1f9;
+    height: 40%;
+    width: 100%;
+    border-radius: 8px;
+}
+.card_info{
+    margin-top: 10px;
+}
+.social_container{
+    width: inherit;
+    height: auto;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+}
+.social_flex_container{
+    height: inherit;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: black;
+}
+.social_card{
+    width: 70%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px;
+}
+.social_icon{
+    height: 100px;
+    width: 40%;
+    background-color: #e8f1f9;
+    border-radius: 7px;
+}
+.social_text{
+    width: 50%;
+}
+.social_text p{
+    margin-top: 20px;
+}
+.checkout_text{
+    width: inherit;
+    height: 300px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.checkout_text p{
+    margin-top: 20px;
+    left: 50px;
+    right: 100px;
+}
+.begin_container{
+    height: auto;
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: black;
+}
+.begin_flex_container{
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+.register_container{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 30px;
+}
+.number{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.number p{
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.register_text{
+    height: auto;
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
 @media screen and (max-width:1000px) {
     span{
         margin: 1rem 0;
@@ -96,6 +241,34 @@ button{
         font-size: 20px;
         font-family: 'Courier New', Courier, monospace;
     }
+    .flex_card{
+        height: inherit;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .card{
+        width: 80%;
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        margin-top: 20px;
+    }
+    .begin_flex_container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  
+   
+  
 }
 @media screen and (max-width:600px) {
     span{
@@ -103,6 +276,13 @@ button{
         display: flex;
         flex-direction: column;
         width: 100%;
+    }
+    .form-container{
+        width: auto;
+        height: 70vh;
+        justify-content: end;
+        display: flex;;
+        right: 0;
     }
     label{
         font-size: 18px;
@@ -122,5 +302,50 @@ button{
         color: #fff;
         font-size: 20px;
         font-family: 'Courier New', Courier, monospace;
+    }
+    .card_main_container{
+        height: auto;
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: linear-gradient( #1d82ea , white);
+    }
+    .social_container{
+        width: inherit;
+        height: 100vh;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .social_flex_container{
+        height: inherit;
+        width: inherit;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .begin_flex_container{
+        width: inherit;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .begin_container{
+        height: auto;
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: black;
+    }
+    .register_container{
+        width: inherit;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 30px;
     }
 }

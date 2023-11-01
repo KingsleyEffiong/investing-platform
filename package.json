@@ -11,6 +11,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.16.0",
+    "react-script": "^2.0.5",
     "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -37,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project is all about creating a business trading and investing platform where users can come trade and invest their money for either gain or loses\r This project was created today 14/10/2023 by dev kingsley effiomg, two programmers would work on this site.\r New features would be included and push into gitup\r Thanks for reading this project info",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
