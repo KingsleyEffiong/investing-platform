@@ -1,6 +1,7 @@
 import './Home.css'
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import * as AiIcons from 'react-icons/ai'
 
 function Home() {
     const form = useRef();
@@ -50,6 +51,7 @@ function Home() {
       <div className='card'>
         <div className='card_category'>
           <div className='card_icon'>
+            <AiIcons.AiFillSetting className='icon_setting'/>
           
           </div>
           <div className='card_info'>
@@ -63,6 +65,7 @@ function Home() {
       <div className='card'>
       <div className='card_category'>
           <div className='card_icon'>
+            <AiIcons.AiFillDollarCircle className='icon_dollar'/>
             
           </div>
           <div className='card_info'>
@@ -79,6 +82,7 @@ function Home() {
       <div className='card'>
       <div className='card_category'>
           <div className='card_icon'>
+            <AiIcons.AiOutlineComment className='icon_comment'/>
             
           </div>
           <div className='card_info'>
@@ -92,6 +96,7 @@ function Home() {
       <div className='card'>
       <div className='card_category'>
           <div className='card_icon'>
+            <AiIcons.AiFillCarryOut className='icon_carryout'/>
             
           </div>
           <div className='card_info'>
@@ -110,6 +115,7 @@ function Home() {
       <div className='social_flex_container'>
         <div className='social_card'>
           <div className='social_icon'>
+            <AiIcons.AiFillInstagram className='social_network_icon'/>
 
           </div>
           <div className='social_text'>
@@ -120,6 +126,7 @@ function Home() {
         </div>
         <div className='social_card'>
           <div className='social_icon'>
+            <AiIcons.AiFillFacebook className='social_network_icon'/>
 
           </div>
           <div className='social_text'>
@@ -134,20 +141,21 @@ function Home() {
       <div className='social_flex_container'>
       <div className='social_card'>
           <div className='social_icon'>
+            <AiIcons.AiFillTwitterSquare className='social_network_icon'/>
 
           </div>
           <div className='social_text'>
-            <h4>TTWITTER</h4>
+            <h4>TWITTER</h4>
             <p>We offer various options to add funds to your account.</p>
           </div>
 
         </div>
         <div className='social_card'>
           <div className='social_icon'>
-
+          <AiIcons.AiOutlineWhatsApp className='social_network_icon'/>
           </div>
           <div className='social_text'>
-            <h4>SNAPCHAT</h4>
+            <h4>WHATSAPP</h4>
             <p>We provide automated order processing on our panel.</p>
           </div>
 
@@ -210,6 +218,62 @@ function Home() {
       </div>
 
     </div>
+    <div className='carouser'>
+      <div className='ask_questions'>
+        <h4>Top 5 Frequently Asked Questions</h4>
+        <p>Our staff chose some of the most popular questions about SMM panels and replied to them.</p>
+      </div>
+      <div className='questions'>
+        <div>
+          <ul>
+            <h4>What are SMM panels?</h4>
+            <li>
+            An SMM panel is an online shop that you can visit to puchase SMM services at great prices.
+            </li>
+          </ul>
+
+        </div>
+        <div>
+        <ul>
+            <h4>What SMM services do you have?</h4>
+            <li>
+            On our panel we sell different types of SMM services, such as likes, followers, views and more.
+            </li>
+          </ul>
+        </div>
+        <div>
+        <ul>
+            <h4>Are SMM services that are sold here safe to order?</h4>
+            <li>
+            It is definitely safe, it won't get your accounts banned.
+            </li>
+          </ul>
+        </div>
+        <div>
+        <ul>
+            <h4>What is the purpose of mass orders?</h4>
+            <li>
+            The mass order feature exists to give users an opportunity to place multiple orders with different links at the same time.
+            </li>
+          </ul>
+        </div>
+        <div>
+        <ul>
+            <h4>What does the Drip-feed feature do?</h4>
+            <li>
+            If you want the growth of your social media account look more seamless, Drip-feed can help you with that. Let's say you want 3000 likes on your Instagram post, you can either get all 3000 right away or make it happen gradually — for example, 300 likes/day for 10 days.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      
+
+    </div>
+    <footer>
+      <a href=''>© Powered by InvestAmerica.</a>
+    </footer>
+   
     </>
   )
 }
