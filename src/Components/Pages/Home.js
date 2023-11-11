@@ -1,45 +1,176 @@
 import './Home.css'
-import React, { useRef } from 'react';
+import React, {
+  useState
+} from 'react';
 import emailjs from '@emailjs/browser';
+import Modal from 'react-modal';
 import * as AiIcons from 'react-icons/ai'
 
 function Home() {
-    const form = useRef();
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [formData, setFormData] = useState({
   
-    const sendEmail = (e) => {
-      e.preventDefault();
+    //   message: 'Drop a Message',
+    //   appointment: 'Your Full Name',
+    //   birth_date: 'Your Birth Date',
+    //   address:'Your Address',
+    //   report:'Your Report'
+  });
   
-      emailjs.sendForm('service_0d7porm', 'template_ds6g5kh', form.current, 'AvuT4KAYiKWzMrkYU')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
-    };
-  
-  return (
-    <>
-  <main className="container">
-    <div className='form-container'>
-    <form ref={form} onSubmit={sendEmail} className='login-form'>
-    <h2>SigIn to access your trade platform and become part of our team</h2>
-      <span>
-      <label>Name</label>
-      <input type="text" name="user_name" />
-      </span>
-      <span>
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      </span>
-      <span>
-      <label>Message</label>
-      <textarea name="message" placeholder='whats the reason for investing in our plaform'/>
-      </span>
-      <button type="submit" value="Send" >Submit</button>
-    </form>
-    </div>
-    
-  </main>
+  const {
+    name,
+    email,
+    phone,
+    address,
+    report
+} = formData;
+
+const handleChange = (e) => {
+    setFormData({ ...formData,
+        [e.target.name]: e.target.value
+    });
+};
+
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  // TODO: Add your Email.js configuration and service ID here
+  const serviceID = 'service_1zhl2qp';
+  const templateID = 'appointment_form';
+  const userID = '5BAQ9E94aLjwu41KG';
+
+  emailjs
+      .sendForm(serviceID, templateID, e.target, userID)
+      .then(() => {
+          console.log('Email sent successfully!');
+          setModalIsOpen(true);
+          setFormData({
+              name: '',
+              email: '',
+              phone: '',
+              address:'',
+              report:'',
+          });
+      })
+      .catch((error) => {
+          console.error('Error sending email:', error);
+      });
+};
+return (
+  <>
+  <div className='container'>
+  <div className='appointment-container'>
+  <form  onSubmit = { handleSubmit}>
+<span className='content'>
+<label
+      for = "user_name"
+      name = ""
+      id = "user_name" > Full Name </label> 
+      <input type = "text"
+      name = "name"
+      value = {
+          name
+      }
+      onChange = {
+          handleChange
+      }
+      placeholder = "your Full Name"
+      required/>
+</span>
+<span className='content'>
+           
+<label
+      for = "user_email"
+      name = "user_email"
+      id = "user_email" > Your Email </label> 
+      <input type = "email"
+      name = "email"
+      value = {
+          email
+      }
+      onChange = {
+          handleChange
+      }
+      placeholder = "your Mail"
+      required/>
+</span>
+<span className='content'>
+                  
+<label
+      for = "user_phone_number"
+      name = "phone"
+      id = "user_phone_number" > Phone Number </label> 
+      <input type = "number"
+      name = "phone"
+      value = {
+          phone
+      }
+      onChange = {
+          handleChange
+      }
+      placeholder = "your Number"
+      required/>
+</span>
+
+
+<span className='content'>
+<label
+      for = "user_address"
+      name = "address"
+      id = "user_address" > Your Address </label> 
+      <input type = "text"
+      name = "address"
+      value = {
+        address
+      }
+      onChange = {
+          handleChange
+      }
+      required placeholder='your address'/>
+</span >
+<span className='content'>
+<label
+      for = "user_report"
+      name = "report"
+      id = "user_report" > Whats the reason for your Investment💯 </label>
+      </span >
+      <span className='content'>
+      <textarea cols='55' rows='5'
+      name = "report"
+      value = {
+        report
+      }
+      onChange = {
+          handleChange
+      }
+      required placeholder='type in your message'/>
+</span>
+<span className='content'>
+      <input className='button' type='submit' value='Send Appointment Form'/>
+</span>
+  </form>
+        <Modal isOpen = {
+          modalIsOpen
+      }
+      className = 'pop-up'
+      onRequestClose = {
+          () => setModalIsOpen(true)
+      }
+      contentLabel = "Email Sent Modal">
+     
+     <h2 className='email'> Email Sent </h2>
+      Your message has been sent successfully! < br/>
+      
+      <button id = 'btn-2'
+      onClick = {
+          () => setModalIsOpen(false)
+      } > Close </button> 
+      </Modal>
+  </div>
+
+  </div>
+
   <div className='card_text'>
     <div>
       <h2>Why our panel?</h2>
@@ -273,8 +404,8 @@ function Home() {
     <footer>
       <a href=''>© Powered by InvestAmerica.</a>
     </footer>
-   
     </>
+   
   )
 }
 
