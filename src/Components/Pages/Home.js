@@ -4,9 +4,24 @@ import React, {
 } from 'react';
 import emailjs from '@emailjs/browser';
 import Modal from 'react-modal';
-import * as AiIcons from 'react-icons/ai'
+import Slideshow from './SlideShow';
 
 function Home() {
+
+  const slides = [
+    {
+      image: '/Images/6029951.jpg',
+      text: "I can't believe how my life has transformed thanks to cryptocurrency trading. I've always been interested in finance and technology, but it wasn't until I stumbled upon the world of crypto that everything changed for the better. I began my crypto journey with just a small investment and a ton of curiosity. I was intrigued by the potential for substantial gains and the decentralized nature of cryptocurrencies. However, I was also cautious, knowing that this market can be highly volatile." 
+    },
+    {
+      image: '/Images/6029993.jpg',
+      text: "After doing my research, attending webinars, and learning from experienced traders, I took the plunge. The early days were a learning curve, and I faced some ups and downs, but I persevered and stayed committed to my strategy. Fast forward a couple of years, and I can confidently say that my life has been completely transformed. Crypto trading has not only provided me with financial freedom, but it has also opened doors to new opportunities and connections within the blockchain community.",
+    },
+    {
+      image: '/Images/4542405.jpg',
+      text: "I've had the privilege of meeting like-minded individuals and collaborating on exciting projects. My cryptocurrency portfolio has grown exponentially, allowing me to invest in other assets and even start my own business. I can finally say goodbye to the 9-to-5 grind and embrace a life where I call the shots. Crypto trading has not only been about monetary gains but has also given me a sense of empowerment and control over my financial future. It's incredible how something as innovative as cryptocurrencies can change lives and create new possibilities."
+    },
+  ];
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [formData, setFormData] = useState({
   
@@ -62,6 +77,7 @@ return (
   <div className='container'>
   <div className='appointment-container'>
   <form  onSubmit = { handleSubmit}>
+    <h2>Register Here</h2>
 <span className='content'>
 <label
       for = "user_name"
@@ -134,8 +150,7 @@ return (
       for = "user_report"
       name = "report"
       id = "user_report" > Whats the reason for your Investment💯 </label>
-      </span >
-      <span className='content'>
+  
       <textarea cols='55' rows='5'
       name = "report"
       value = {
@@ -145,7 +160,7 @@ return (
           handleChange
       }
       required placeholder='type in your message'/>
-</span>
+          </span >
 <span className='content'>
       <input className='button' type='submit' value='Send Appointment Form'/>
 </span>
@@ -171,130 +186,6 @@ return (
 
   </div>
 
-  <div className='card_text'>
-    <div>
-      <h2>Why our panel?</h2>
-      <p>Learn why using our panel is the best & cheapest way to get popular online.</p>
-    </div>
-  </div>
-  <div className='card_main_container'>
-    <div className='flex_card'>
-      <div className='card'>
-        <div className='card_category'>
-          <div className='card_icon'>
-            <AiIcons.AiFillSetting className='icon_setting'/>
-          
-          </div>
-          <div className='card_info'>
-          <p>Superb quality</p>
-            <p>You will be pleasantly surprised at the results.</p>
-          </div>
-
-        </div>
-
-      </div>
-      <div className='card'>
-      <div className='card_category'>
-          <div className='card_icon'>
-            <AiIcons.AiFillDollarCircle className='icon_dollar'/>
-            
-          </div>
-          <div className='card_info'>
-          <p>Many payment options</p>
-            <p>Great variety of payment methods for you to choose from.</p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-    <div className='flex_card'>
-      <div className='card'>
-      <div className='card_category'>
-          <div className='card_icon'>
-            <AiIcons.AiOutlineComment className='icon_comment'/>
-            
-          </div>
-          <div className='card_info'>
-          <p>Really cheap</p>
-            <p>All services offered on our panel are super affordable.</p>
-          </div>
-
-        </div>
-
-      </div>
-      <div className='card'>
-      <div className='card_category'>
-          <div className='card_icon'>
-            <AiIcons.AiFillCarryOut className='icon_carryout'/>
-            
-          </div>
-          <div className='card_info'>
-          <p>Delivered quickly</p>
-            <p>Enjoy the extra short order delivery time on our panel.</p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    </div>
-    <div className='social_container'>
-      <div className='social_flex_container'>
-        <div className='social_card'>
-          <div className='social_icon'>
-            <AiIcons.AiFillInstagram className='social_network_icon'/>
-
-          </div>
-          <div className='social_text'>
-            <h4>INSTAGRAM</h4>
-            <p>We always strive to provide the best services possible.</p>
-          </div>
-
-        </div>
-        <div className='social_card'>
-          <div className='social_icon'>
-            <AiIcons.AiFillFacebook className='social_network_icon'/>
-
-          </div>
-          <div className='social_text'>
-            <h4>FACEBOOK</h4>
-            <p>All services offered on our panel are super affordable.</p>
-          </div>
-
-        </div>
-        
-
-      </div>
-      <div className='social_flex_container'>
-      <div className='social_card'>
-          <div className='social_icon'>
-            <AiIcons.AiFillTwitterSquare className='social_network_icon'/>
-
-          </div>
-          <div className='social_text'>
-            <h4>TWITTER</h4>
-            <p>We offer various options to add funds to your account.</p>
-          </div>
-
-        </div>
-        <div className='social_card'>
-          <div className='social_icon'>
-          <AiIcons.AiOutlineWhatsApp className='social_network_icon'/>
-          </div>
-          <div className='social_text'>
-            <h4>WHATSAPP</h4>
-            <p>We provide automated order processing on our panel.</p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
     <div className='checkout_text'>
       <h3>Where to begin?</h3>
       <p>Check out the step-by-step tutorial on how to get started on our SMM panel.</p>
@@ -344,11 +235,10 @@ return (
           </div>
 
         </div>
-
-
-      </div>
-
+      </div>  
     </div>
+      <Slideshow slides={slides} />
+
     <div className='carouser'>
       <div className='ask_questions'>
         <h4>Top 5 Frequently Asked Questions</h4>
