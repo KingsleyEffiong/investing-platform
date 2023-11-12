@@ -46,34 +46,61 @@
     background-position:initial;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 130vh;
+    height: 80vh;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: #fff;
 }
+.con-text{
+    color: #ffffff;
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1rem;
+    width: fit-content;
+    font-size: 3rem;
+    font-style: oblique;
+}
+.reg{
+    width: fit-content;
+    background: none;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    padding: 0.5em;
+    font-size: 20px;
+    cursor: pointer;
 
+}
 .appointment-container{
     width: fit-content;
     height: fit-content;
     padding: 1rem;
     position: absolute;
+    background-color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     left: 0;
-    margin:3.4rem  2rem;
-    color: #ffffff;
+    margin:9rem  2rem;
+    color: #918c8c;
 }
 .content{
     display: flex;
     justify-content: center;
-    padding: 0.9rem 1rem;
+    padding: 2rem 1rem;
     flex-direction: column;
 }
 span{
     font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 input{
    padding: 0.9rem;
    outline: none;
    border: none;
+   background: none;
+   border-bottom: 1px solid #000000;
    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
    width: 300px;
    color: #000000;
@@ -88,7 +115,7 @@ textarea{
     width: 330px;
 } 
 .button{
-    background-color: black;
+    background-color: #008178;
     border: none;
     cursor: pointer;
     color: #fff;
@@ -254,8 +281,8 @@ footer{
 }
   /* Slide image */
   .slide img {
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 100%;
+    max-height: 100%;
   }
   
   /* Slide text */
@@ -302,6 +329,15 @@ footer{
         padding: 2rem;
         color: #fff;
     }
+    .con-text{
+        color: #ffffff;
+        margin-top: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 1rem;
+        width: fit-content;
+        font-size: 2rem;
+        font-style: oblique;
+    }
   
     .begin_flex_container{
         width: 100%;
@@ -318,10 +354,21 @@ footer{
         display: flex;
         flex-direction: column;
     }
+    .appointment-container{
+        width: fit-content;
+        height: fit-content;
+        padding: 1rem;
+        position: absolute;
+        background-color: white;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        left: 0;
+        margin:8rem  2rem;
+        color: #918c8c;
+    }
     .content{
         display: flex;
         justify-content: center;
-        padding: 0.9rem 0.5rem;
+        padding: 2rem 1rem;
         flex-direction: column;
     }
     span{
@@ -329,14 +376,16 @@ footer{
         font-family: Arial, Helvetica, sans-serif;
     }
     input{
-       padding: 0.5rem;
-       outline: none;
-       border: none;
-       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-       width: 200px;
-       color: #000000;
-       font-size: 1.2rem;
-    }
+        padding: 0.9rem;
+        outline: none;
+        border: none;
+        background: none;
+        border-bottom: 1px solid #000000;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        width: 300px;
+        color: #000000;
+        font-size: 1.2rem;
+     }
     textarea{
         outline: none;
         border: none;
@@ -365,6 +414,15 @@ footer{
         display: flex;
         flex-direction: column;
     }
+    .con-text{
+        color: #ffffff;
+        margin-top: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 1rem;
+        width: fit-content;
+        font-size: 1rem;
+        font-style: oblique;
+    }
     .begin_container{
         height: auto;
         width: inherit;
@@ -391,16 +449,24 @@ footer{
         height: fit-content;
         padding: 1rem;
         position: absolute;
+        background-color: white;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
         left: 0;
-        margin:3.4rem  2rem;
-        color: #ffffff;
+        margin:5rem  0rem;
+        color: #918c8c;
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        padding: 2rem 0rem;
+        flex-direction: column;
     }
     .container{
         background-image: url(/public/Images/3734602.jpg);
         background-position:initial;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 100vh;
+        height: 80vh;
         padding: 2rem;
         color: #fff;
     }
@@ -408,4 +474,53 @@ footer{
         width:90%;
         height: fit-content;
       }
+}
+@media screen and (max-width:320px) {
+    .appointment-container{
+        width: fit-content;
+        height: fit-content;
+        padding: 1rem;
+        position: absolute;
+        background-color: white;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        left: 0;
+        margin:5rem  0rem;
+        color: #918c8c;
+    }
+    .con-text{
+        color: #ffffff;
+        margin-top: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 1rem;
+        width: fit-content;
+        font-size: 0.7rem;
+        font-style: oblique;
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        padding: 2rem 0rem;
+        flex-direction: column;
+    }
+    .container{
+        background-image: url(/public/Images/3734602.jpg);
+        background-position:initial;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 80vh;
+        padding: 2rem;
+        color: #fff;
+    }    span{
+        font-size: 14px;
+    }
+    input{
+        outline: none;
+        border: none;
+        background: none;
+        border-bottom: 1px solid #000000;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        width: 190px;
+        color: #000000;
+        font-size: 14px;
+     }
 }

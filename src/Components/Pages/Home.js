@@ -8,6 +8,15 @@ import Slideshow from './SlideShow';
 
 function Home() {
 
+    const [showForm, setShowForm] = useState(false);
+    const [submitted, setSubmitted] = useState(false);
+  
+    // Function to toggle the form visibility
+    const toggleForm = () => {
+      setShowForm(!showForm);
+    };
+     
+
   const slides = [
     {
       image: '/Images/6029951.jpg',
@@ -25,19 +34,12 @@ function Home() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [formData, setFormData] = useState({
   
-    //   message: 'Drop a Message',
-    //   appointment: 'Your Full Name',
-    //   birth_date: 'Your Birth Date',
-    //   address:'Your Address',
-    //   report:'Your Report'
   });
   
   const {
     name,
     email,
     phone,
-    address,
-    report
 } = formData;
 
 const handleChange = (e) => {
@@ -49,6 +51,11 @@ const handleChange = (e) => {
 
 const handleSubmit = (e) => {
   e.preventDefault();
+      // Add your form submission logic here
+      // For example, you can make an API request to save the data
+  
+      // Mark the form as submitted
+      setSubmitted(true);
 
   // TODO: Add your Email.js configuration and service ID here
   const serviceID = 'service_1zhl2qp';
@@ -64,8 +71,6 @@ const handleSubmit = (e) => {
               name: '',
               email: '',
               phone: '',
-              address:'',
-              report:'',
           });
       })
       .catch((error) => {
@@ -75,9 +80,14 @@ const handleSubmit = (e) => {
 return (
   <>
   <div className='container'>
+  <h1 className='con-text'>Do good by Investing better💰📉</h1>
+  <button className='reg'  onClick={toggleForm}>{submitted ? 'Thank You For Registering with Us, Please Check your Mail for a link from our Support Team' : 'Click Here to Register with Us'}</button>
+  {showForm && !submitted && (
   <div className='appointment-container'>
+
   <form  onSubmit = { handleSubmit}>
-    <h2>Register Here</h2>
+    <h2>Register Here and Invest📈</h2>
+    
 <span className='content'>
 <label
       for = "user_name"
@@ -128,44 +138,15 @@ return (
       placeholder = "your Number"
       required/>
 </span>
-
-
-<span className='content'>
-<label
-      for = "user_address"
-      name = "address"
-      id = "user_address" > Your Address </label> 
-      <input type = "text"
-      name = "address"
-      value = {
-        address
-      }
-      onChange = {
-          handleChange
-      }
-      required placeholder='your address'/>
-</span >
-<span className='content'>
-<label
-      for = "user_report"
-      name = "report"
-      id = "user_report" > Whats the reason for your Investment💯 </label>
-  
-      <textarea cols='55' rows='5'
-      name = "report"
-      value = {
-        report
-      }
-      onChange = {
-          handleChange
-      }
-      required placeholder='type in your message'/>
-          </span >
 <span className='content'>
       <input className='button' type='submit' value='Send Appointment Form'/>
 </span>
   </form>
-        <Modal isOpen = {
+
+   
+  </div>
+    )}
+         <Modal isOpen = {
           modalIsOpen
       }
       className = 'pop-up'
@@ -182,8 +163,6 @@ return (
           () => setModalIsOpen(false)
       } > Close </button> 
       </Modal>
-  </div>
-
   </div>
 
     <div className='checkout_text'>
@@ -210,7 +189,6 @@ return (
             <h4>2. Add funds</h4>
             <p>Add funds using a preferred payment method.</p>
           </div>
-
         </div>
 
       </div>
