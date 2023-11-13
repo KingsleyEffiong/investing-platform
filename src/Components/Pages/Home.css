@@ -48,36 +48,6 @@
     align-items: center;
     color: #fff;
 }
-.container::before, .container::after {
-    content: "";
-    display: none;
-    animation: change-image 30s ease-in-out infinite alternate;
-    background-position:initial;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 80vh;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-}
-
-.container::before {
-    animation: change-image 0.1s linear infinite;
-    animation: change-image 30s ease-in-out infinite alternate;
-    background-position:initial;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 80vh;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-}
 h1{
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
