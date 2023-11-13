@@ -80,13 +80,15 @@ const handleSubmit = (e) => {
 return (
   <>
   <div className='container'>
-  <h1 className='con-text'>Do good by Investing better💰📉</h1>
+  <h1>DO GOOD</h1>
+  <h2>BY INVESTING BETTER</h2>
+  <p className='p-tag'>Invest in cryptocurrency through Jupiter and be part of others that have become crypto wealthy</p>
   <button className='reg'  onClick={toggleForm}>{submitted ? 'Thank You For Registering with Us, Please Check your Mail for a link from our Support Team' : 'Click Here to Register with Us'}</button>
   {showForm && !submitted && (
   <div className='appointment-container'>
 
   <form  onSubmit = { handleSubmit}>
-    <h2>Register Here and Invest📈</h2>
+    <h3>Register Here and Invest📈</h3>
     
 <span className='content'>
 <label
@@ -166,8 +168,8 @@ return (
   </div>
 
     <div className='checkout_text'>
-      <h3>Where to begin?</h3>
-      <p>Check out the step-by-step tutorial on how to get started on our SMM panel.</p>
+      <h3>What we do!</h3>
+      {/* <p>Check out the step-by-step tutorial on how to get started on our SMM panel.</p> */}
     </div>
     <div className='begin_container'>
       <div className='begin_flex_container'>
@@ -176,8 +178,8 @@ return (
             <p>1</p>
           </div>
           <div className='register_text'>
-            <h4>1. Register & log in</h4>
-            <p>You need to create an account and then log in.</p>
+            <h4>Effortless Investment</h4>
+            <p className='p-tag'>Put in your money to use and watch it yield astronomical gains. A 150% revenue increase</p>
           </div>
 
         </div>
@@ -186,8 +188,8 @@ return (
             <p>2</p>
           </div>
           <div className='register_text'>
-            <h4>2. Add funds</h4>
-            <p>Add funds using a preferred payment method.</p>
+            <h4>Multiple investment models</h4>
+            <p className='p-tag'>With multiple investment models, you choose whats best for you</p>
           </div>
         </div>
 
@@ -198,8 +200,8 @@ return (
             <p>3</p>
           </div>
           <div className='register_text'>
-            <h4>3. Pick services</h4>
-            <p>Place orders and help your business gain more popularity.</p>
+            <h4>No Taxes</h4>
+            <p className='p-tag'>Through our infinite three dimensional equality, taxes are taken care of and every percentage gain is returned to the investors</p>
           </div>
 
         </div>
@@ -208,8 +210,8 @@ return (
             <p>4</p>
           </div>
           <div className='register_text'>
-            <h4>4. Superb results</h4>
-            <p>This is it! You will get the results that you want very soon.</p>
+            <h4> Crypto Only Investment</h4>
+            <p className='p-tag'>Jupiter works with USDT, Bitcoin and Etherium liquidity space</p>
           </div>
 
         </div>
@@ -220,7 +222,6 @@ return (
     <div className='carouser'>
       <div className='ask_questions'>
         <h4>Top 5 Frequently Asked Questions</h4>
-        <p>Our staff chose some of the most popular questions about SMM panels and replied to them.</p>
       </div>
       <div className='questions'>
         <div>

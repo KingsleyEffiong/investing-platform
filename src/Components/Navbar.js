@@ -16,7 +16,7 @@ function Navbar() {
     <div className='nav_container'>
      <Link to="/">
         <div className='logo' onClick ={closeMobileMenu}>
-          <h1>InvestAmerica</h1>
+          <h1 className='navbar-logo'>Jupiter</h1>
         {/* <img width='100' height='20'  src='/Images/Invest in logo.jpg' alt='invest in logo'></img> */}
       </div>
       </Link>

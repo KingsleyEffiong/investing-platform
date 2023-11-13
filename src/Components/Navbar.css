@@ -18,13 +18,14 @@ a{
     top: 0;
     z-index: 999;
 }
-h1{
+.navbar-logo{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
     color: #000000;
 }
 .logo{
     cursor: pointer;
+    color: #000000;
 }
 .list_container{
    display: flex;
