@@ -25,8 +25,8 @@ function Navbar() {
       </div>
       <div className='list_container' >
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <Link to='' className='list_links'><li>Home</li></Link>
-          <Link to=''className='list_links' ><li>About</li></Link>
+          <Link to='/' className='list_links'><li>Home</li></Link>
+          <Link to='/about'className='list_links' ><li>About</li></Link>
           <Link to=''className='list_links'><li>Contact us</li></Link>
         </ul>
       </div>
