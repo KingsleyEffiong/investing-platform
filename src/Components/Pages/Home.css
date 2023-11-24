@@ -1,52 +1,39 @@
 /* body{
     background-image: linear-gradient( #003c38,  #008178);
 } */
-@keyframes change-image{
-    0%{
-        background-image:url(/public/Images/3734602.jpg) ;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-    20%{
-        background-image:url(/public/Images/istockphoto-1481023226-612x612.jpg) ;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-    40%{
-        background-image:url(/public/Images/1496333.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-    60%{
-        background-image:url(/public/Images/1496316.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-    100%{
-        background-image:url(/public/Images/1496348.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
 
-}
 
 .container{
-    animation: change-image 30s ease-in-out infinite alternate;
-    background-position:initial;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 80vh;
-    padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
     align-items: center;
     color: #fff;
+}
+.video{
+    width: 100%;
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+}
+.form-container{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    /* padding: 1rem; */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    z-index: 2; 
 }
 h1{
     color: #ffffff;
@@ -59,6 +46,7 @@ h2{
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: fit-content;
+    font-size: 3rem;
     font-style: oblique;
 }
 
@@ -169,7 +157,7 @@ textarea{
 }
 
 .checkout_text{
-    width: inherit;
+    width: 97.5%;
     height: fit-content;
     background-color: black;
     color: white;
@@ -187,7 +175,7 @@ textarea{
 
 .begin_container{
     height: auto;
-    width: inherit;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -343,20 +331,42 @@ footer{
     height: fit-content;
   }
 @media screen and (max-width:1000px) {
-    .container{
-        background-image: url(/public/Images/3734602.jpg);
-        background-position:initial;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 80vh;
-        padding: 2rem;
-        color: #fff;
+    .appointment-container{
+        width: fit-content;
+        height: fit-content;
+        padding: 1rem;
+        position: absolute;
+        background-color: white;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        left: 0;
+        margin:20rem  2rem;
+        color: #918c8c;
     }
+    .form-container{
+    position: absolute;
+    top: 2%;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    z-index: 2; 
+}
+h2{
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: fit-content;
+    font-size: 1.5rem;
+    font-style: oblique;
+}
     h1{
         color: #ffffff;
         margin-top: 20px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        padding: 1rem;
         width: fit-content;
         font-size: 2rem;
         font-style: oblique;
@@ -376,17 +386,6 @@ footer{
         border: 2px solid black;
         display: flex;
         flex-direction: column;
-    }
-    .appointment-container{
-        width: fit-content;
-        height: fit-content;
-        padding: 1rem;
-        position: absolute;
-        background-color: white;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-        left: 0;
-        margin:8rem  2rem;
-        color: #918c8c;
     }
     .content{
         display: flex;
@@ -430,12 +429,63 @@ footer{
   
 }
 @media screen and (max-width:750px) {
+    .p-tag{
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-style: oblique;
+        text-align: center;
+        font-size: 12px;
+    }
 
     .begin_flex_container{
         width: inherit;
         height: auto;
         display: flex;
         flex-direction: column;
+    }
+    .reg{
+        width: fit-content;
+        background: none;
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 2px;
+        padding: 0.5em;
+        font-size: 10px;
+        cursor: pointer;
+    
+    }
+    h2{
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        width: fit-content;
+        font-size: 1rem;
+        font-style: oblique;
+    }
+    .form-container{
+        position: absolute;
+        top: -10%;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        /* padding: 1rem; */
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        z-index: 2; 
+    }
+    .appointment-container{
+        width: fit-content;
+        height: fit-content;
+        padding: 1rem;
+        position: absolute;
+        background-color: white;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        left: 0;
+      top: 1%;
+        /* background-color: red; */
+        color: #918c8c;
     }
     .slide p {
         margin-top: 20px;
@@ -478,17 +528,6 @@ footer{
         text-align: center;
         padding: 1rem;
     }
-    .appointment-container{
-        width: fit-content;
-        height: fit-content;
-        padding: 1rem;
-        position: absolute;
-        background-color: white;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-        left: 0;
-        margin:5rem  0rem;
-        color: #918c8c;
-    }
     .content{
         display: flex;
         justify-content: center;
@@ -496,10 +535,6 @@ footer{
         flex-direction: column;
     }
     .container{
-        background-image: url(/public/Images/3734602.jpg);
-        background-position:initial;
-        background-repeat: no-repeat;
-        background-size: cover;
         height: 80vh;
         padding: 2rem;
         color: #fff;
@@ -525,7 +560,6 @@ footer{
         color: #ffffff;
         margin-top: 20px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        padding: 1rem;
         width: fit-content;
         font-size: 1rem;
         font-style: oblique;
@@ -537,10 +571,6 @@ footer{
         flex-direction: column;
     }
     .container{
-        background-image: url(/public/Images/3734602.jpg);
-        background-position:initial;
-        background-repeat: no-repeat;
-        background-size: cover;
         height: 80vh;
         padding: 2rem;
         color: #fff;

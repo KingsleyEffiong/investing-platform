@@ -1,12 +1,25 @@
 import './Home.css'
 import React, {
-  useState
+  useState, useEffect
 } from 'react';
 import emailjs from '@emailjs/browser';
 import Modal from 'react-modal';
 import Slideshow from './SlideShow';
+import Preloader from '../Preloader';
+import ReactPlayer from 'react-player';
+
 
 function Home() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      // Simulate a delay or perform any asynchronous tasks
+      setLoading(false);
+    }, 2000); // replace 2000 with the actual time it takes to load your page
+
+    return () => clearTimeout(timeout);
+  }, []);
 
     const [showForm, setShowForm] = useState(false);
     const [submitted, setSubmitted] = useState(false);
@@ -79,14 +92,28 @@ const handleSubmit = (e) => {
 };
 return (
   <>
-  <div className='container'>
-  <h1>DO GOOD</h1>
+      <div>
+      {loading ? (
+        <Preloader />
+      ) : (
+        <Preloader/>
+      )}
+    </div>
+    <ReactPlayer   url="/Images/vecteezy_digitale-animation-des-borsenkursdiagramms-fur-unternehmen_2273297.mp4" // replace with the actual URL or path to your video file
+        playing
+        loop
+        muted
+        width='100%'
+        height='100%'
+        className = 'video'
+          />
+        <div className='form-container'>
+          <h2>DO GOOD</h2>
   <h2>BY INVESTING BETTER</h2>
   <p className='p-tag'>Invest in cryptocurrency through Jupiter and be part of others that have become crypto wealthy</p>
   <button className='reg'  onClick={toggleForm}>{submitted ? 'Thank You For Registering with Us, Please Check your Mail for a link from our Support Team' : 'Click Here to Register with Us'}</button>
   {showForm && !submitted && (
   <div className='appointment-container'>
-
   <form  onSubmit = { handleSubmit}>
     <h3>Register Here and Invest📈</h3>
     
@@ -165,13 +192,10 @@ return (
           () => setModalIsOpen(false)
       } > Close </button> 
       </Modal>
-  </div>
-
-    <div className='checkout_text'>
-      <h3>What we do!</h3>
-      {/* <p>Check out the step-by-step tutorial on how to get started on our SMM panel.</p> */}
-    </div>
+      </div>
+=
     <div className='begin_container'>
+    <h3>What we do!</h3>
       <div className='begin_flex_container'>
         <div className='register_container'>
           <div className='number'>
@@ -267,9 +291,9 @@ return (
         </div>
 
       </div>
-      
-
     </div>
+
+    
     <footer>
       <a href=''>© Powered by InvestAmerica.</a>
     </footer>

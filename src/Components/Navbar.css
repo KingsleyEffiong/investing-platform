@@ -7,13 +7,14 @@ a{
 }
 
 .nav_container{
-    width: 100%;
+    width: 80%;
     height:8vh;
     background-color: inherit;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    color: #ffffff;
+    background:none;
     position: fixed;
     top: 0;
     z-index: 999;
@@ -21,7 +22,7 @@ a{
 .navbar-logo{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
-    color: #000000;
+    color: #ffffff;
 }
 .logo{
     cursor: pointer;
@@ -40,12 +41,10 @@ a{
 .nav-menu {
     display: flex;
     list-style: none;
-    position:absolute;
     width: 100%;
     list-style: none;
     right: 0;
     text-align: center;
-    justify-content: flex-end;
     align-items: center;    
 }
 li {
@@ -53,14 +52,14 @@ li {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 .nav-menu  a{
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
 }
 
 li .list_links:hover{
-    color: black;
+    color: rgb(255, 255, 255);
     transition: 1.5s ease-in-out;
 }
 @media screen and (max-width:1000px) {
@@ -92,7 +91,7 @@ li .list_links:hover{
         right: 0;
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
-        color:  #000000;
+        color:  #ffffff;
         cursor: pointer;
     }
  
